@@ -1,0 +1,19 @@
+{
+    "schedule":"* * * * *",
+    "nodeId":"Testing",
+    "location":"East Development",
+    "sensors": {
+        "fake-sensor-1":{
+            "id": "fake-sensor-1",
+            "location":"East Development"
+        }
+    },
+    "services": {
+        "console": {
+            "humanReadable": true
+        },
+        "segment":{
+            "key":""
+        }
+    }
+}

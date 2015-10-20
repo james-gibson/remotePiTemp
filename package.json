@@ -1,0 +1,16 @@
+{
+  "name": "remote-pi-temp",
+  "version": "0.0.1",
+  "description": "A simple node app that will broadcast current temperatures from a number of ds1820 sensors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Gibson",
+  "license": "MIT",
+  "dependencies": {
+    "analytics-node": "^2.0.0",
+    "ds18b20": "0.0.2",
+    "node-crontab": "0.0.8"
+  }
+}
