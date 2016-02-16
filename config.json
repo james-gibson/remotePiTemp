@@ -14,6 +14,10 @@
             "alias": "NW Corner (TEST)"
         }
     },
+    "triggers": {
+        "acceptableRange": {
+            "high": 85,
+            "low": 70
         }
     },
     "services": {

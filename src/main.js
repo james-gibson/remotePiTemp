@@ -13,8 +13,16 @@ function recordTemperature() {
                 value.alias = config.sensors[value.id].alias;
             }
 
+
+            if (config.triggers.acceptableRange) {
+                if (value.F < config.triggers.acceptableRange.low
+                    || value.F > config.triggers.acceptableRange.high) {
+                    logger.log(value);
+                }
+            } else {
                 logger.log(value);
-            });
+            }
+        });
     });
 };
 
