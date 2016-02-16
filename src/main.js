@@ -3,16 +3,16 @@ var crontab = require('node-crontab');
 var config =  require('../config.json');
 var logger =  require('./logger.js');
 
-function recordTemperature(){
-    ds18b20.sensors(function(err, ids) {
-        for(index in ids){
-            ds18b20.temperature(ids[index], function(err, value) {
 var sensors = [];
+
+function recordTemperature() {
+    sensors.forEach(function (sensor) {
+        ds18b20.temperature(sensor, function(err, value) {
                 logger.log(value);
             });
-        }
     });
-}
+};
+
 function setupSensors() {
     var promise = new Promise(function (resolve, reject) {
         var tmpSensors;
