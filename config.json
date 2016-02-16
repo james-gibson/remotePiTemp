@@ -3,9 +3,17 @@
     "nodeId":"Testing",
     "location":"East Development",
     "sensors": {
-        "fake-sensor-1":{
+        "fake-sensor-1": {
             "id": "fake-sensor-1",
-            "location":"East Development"
+            "location":"NE Corner",
+            "alias": "NE Corner (TEST)"
+        },
+        "fake-sensor-2": {
+            "id": "fake-sensor-2",
+            "location":"NW Corner",
+            "alias": "NW Corner (TEST)"
+        }
+    },
         }
     },
     "services": {

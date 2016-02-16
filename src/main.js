@@ -9,6 +9,10 @@ var sensors = [];
 function recordTemperature() {
     sensors.forEach(function (sensor) {
         ds18b20.temperature(sensor, function(err, value) {
+            if (config.sensors[value.id]) {
+                value.alias = config.sensors[value.id].alias;
+            }
+
                 logger.log(value);
             });
     });
