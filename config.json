@@ -14,6 +14,13 @@
         },
         "segment":{
             "key":""
+        },
+        "twitter": {
+            "humanReadable": true,
+            "consumerKey": "",
+            "consumerSecret": "",
+            "accessTokenKey": "",
+            "accessTokenSecret": ""
         }
     }
 }
