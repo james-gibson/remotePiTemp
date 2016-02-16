@@ -12,6 +12,7 @@
     "analytics-node": "^2.0.0",
     "ds18b20": "0.0.2",
     "node-crontab": "0.0.8",
-    "prompt": "1.0.0"
+    "prompt": "1.0.0",
+    "twitter": "^1.2.5"
   }
 }
