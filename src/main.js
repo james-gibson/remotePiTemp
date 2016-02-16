@@ -2,6 +2,7 @@ var ds18b20 = require('ds18b20');
 var crontab = require('node-crontab');
 var config =  require('../config.json');
 var logger =  require('./logger.js');
+var prompt = require('prompt');
 
 var sensors = [];
 
@@ -39,6 +40,19 @@ function setupSensors() {
     return promise;
 };
 
-var jobId = crontab.scheduleJob(config.schedule, recordTemperature);
-console.log('CronJob scheduled: '+ jobId);
-recordTemperature();
+function run(allSensors) {
+    sensors = allSensors;
+
+    var jobId = crontab.scheduleJob(config.schedule, recordTemperature);
+    console.log('CronJob scheduled: '+ jobId);
+
+    recordTemperature();
+};
+
+setupSensors()
+    .then(function (allSensors) {
+        run(allSensors);
+    })
+    .catch(function (err) {
+        console.log(err);
+    })
